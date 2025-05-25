@@ -1,0 +1,13 @@
+{% extends 'weather/base.html' %}
+
+{% block content %}
+<main>
+    <section class="location">
+        <div class="city">{{ weather.city }}</div>
+    </section>
+    <div class="current">
+        <div class="temp">{{ weather.temp}}<span>°c</span></div>
+        <div class="weather">{{ weather.weather }}</div>
+    </div>
+</main>
+{% endblock %}

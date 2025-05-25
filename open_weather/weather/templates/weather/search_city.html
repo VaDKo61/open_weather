@@ -1,0 +1,17 @@
+{% extends 'weather/base.html' %}
+
+{% block content %}
+<main>
+    <section class="location">
+        {% for city in cities %}
+        <div class="city">
+            <a href="/weather/{{city.lat}}&{{city.lon}}">
+                Город: {{ city.name }}
+                Страна: {{ city.country }}
+                Регион: {{ city.state }}
+            </a>
+        </div>
+        {% endfor %}
+    </section>
+</main>
+{% endblock %}
